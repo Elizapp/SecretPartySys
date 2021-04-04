@@ -90,11 +90,21 @@ public class User  {
 			}
 		}
 
-	//	System.out.println(usertype);
 		return usertype;
 	}
 	
-	
+	public void saveuser(String firstname , String lastname, String usertype, String  birthdate, String email, 
+			String password, String street, String city, String state, String zip) {
+		AccessDb insertaddress = new AccessDb();
+		String sqladdres = "INSERT INTO `address` ( `street`, `city`, `state`, `zip`) "
+				+ "VALUES ('"+street+"', '"+city+"', '"+state+"', '"+zip+"')";
+		int addressid=insertaddress.doqueryinsert(sqladdres);
+		AccessDb insertusuario = new AccessDb();
+
+		String sqluser = "INSERT INTO `users` ( `typeofusers`, `firstName`, `lastName`, `password`, `email`, `dateOfbirth`, `addressId`) "
+				+ "VALUES ('"+usertype+"', '"+firstname+"', '"+lastname+"', '"+password+"', '"+email+"', '"+birthdate+"', '"+addressid+"')";
+		insertusuario.doqueryinsert(sqluser);
+	}
 	
 	
 	

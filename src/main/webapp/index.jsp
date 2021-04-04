@@ -69,7 +69,6 @@
 	HttpSession ses = request.getSession();
 	String typeuser = "";
 	String email = "";
-	System.out.println(request.getAttribute("typeuser"));
 	if(request.getAttribute("typeuser")!=null){
 		typeuser = (String)request.getAttribute("typeuser");
 		email = (String)request.getAttribute("email");

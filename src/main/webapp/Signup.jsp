@@ -42,35 +42,37 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 align-self-center text-lg-left text-center offset-md-2" style="">
-          <form class="p-4" method="post" action="https://formspree.io/">
+          <form class="p-4" method="post" action="SERVERSIGNUP">
             <h4 class="mb-4 text-center"><mark class="secondary shadowed bg-success">Sign Up</mark></h4>
             <div class="form-group"> <label>First Name</label>
-              <input class="form-control" placeholder="Type here">
-              <div class="form-group"><label>Last name</label><input class="form-control" placeholder="Type here">
-                <div class="form-group"><br/><label>Choose Type of User you are:&nbsp;</label><select class="form-control" placeholder="Type here">
-                    <option value="Host">Host</option>
-                    <option value="Guest">Guest</option>
+              <input class="form-control" name="txtfname" placeholder="Type here" required>
+              <div class="form-group"><label>Last name</label>
+              	<input class="form-control" name="txtlname" placeholder="Type here" required>
+                <div class="form-group"><br/><label>Choose Type of User you are:&nbsp;</label>
+                <select class="form-control"  name="txttypeuser"  placeholder="Type here" required>
+                    <option value="HOST">Host</option>
+                    <option value="GUEST">Guest</option>
                   </select></div>
               </div>
             </div>
             <div class="form-group"> <label>Date of Birth</label>
-              <input type="date" class="form-control" placeholder="13"> </div>
+              <input type="date" name="txtbirthday" class="form-control" placeholder="13" required> </div>
             <div class="form-group"> <label>Email</label>
-              <input type="email" class="form-control" placeholder="2"> </div>
+              <input type="email" name="txtemail" class="form-control" placeholder="2" required> </div>
             <div class="form-group"> <label>Password</label>
-              <input type="password" class="form-control" placeholder="2"> </div>
+              <input type="password" name="txtpassword" class="form-control" placeholder="2" required> </div>
             <p><b style="">Address</b></p>
             <div class="form-group"> <label><i>Street</i></label>
-              <input type="text" class="form-control form-control-sm m-0 mx-0 ml-0" placeholder="2"> </div>
+              <input type="text" name="txtstreet"  class="form-control form-control-sm m-0 mx-0 ml-0" placeholder="2" required> </div>
             <div class="form-group" style=""> <label><i>City</i></label>
-              <input type="text" class="form-control form-control-sm" placeholder="2" style=""> </div>
+              <input type="text" name="txtcity" class="form-control form-control-sm" placeholder="2" style="" required> </div>
             <div class="form-group" style=""> <label><i>State</i></label>
-              <input type="text" class="form-control form-control-sm" placeholder="2" style=""> </div>
+              <input type="text"  name="txtstate" class="form-control form-control-sm" placeholder="2" style="" required> </div>
             <div class="form-group" style=""> <label><i>Zip</i></label>
-              <input type="text" class="form-control form-control-sm" placeholder="2" style=""> </div>
+              <input type="text"   name="txtzip"  class="form-control form-control-sm" placeholder="2" style="" required> </div>
             <div class="form-group"> <label></label>
             </div>
-            <button type="submit" class="btn mt-4 btn-block p-2 btn-info shadowed" contenteditable="true">Sign up</button>
+            <button type="submit" name="btnsingup" class="btn mt-4 btn-block p-2 btn-info shadowed" contenteditable="true">Sign up</button>
           </form>
         </div>
       </div>

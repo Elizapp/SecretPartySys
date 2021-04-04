@@ -1,2 +1,6 @@
-/servelets/
+/classes/
 /dbcon/
+/dto/
+/object/
+/servelets/
+/service/
