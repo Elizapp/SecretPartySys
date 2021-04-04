@@ -6576,3 +6576,6 @@ mark.secondary {
   .animate-in-right.out-of-viewport {
     opacity: 0;
     left: 5%; }
+    .cover{
+    background-image: url("assets/background/cover_dark.jpg");
+    }
