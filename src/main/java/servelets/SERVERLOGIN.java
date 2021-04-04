@@ -46,7 +46,7 @@ public class SERVERLOGIN extends HttpServlet {
 				request.setAttribute("typeuser", typeuser);
 				request.setAttribute("email", email);
 				
-				rd = request.getRequestDispatcher("login.jsp");
+				rd = request.getRequestDispatcher("index.jsp");
 			}
 			rd.forward(request, response);
 		}
@@ -60,30 +60,5 @@ public class SERVERLOGIN extends HttpServlet {
 		doGet(request, response);
 	}
 	
-//	protected void processRequest(HttpServletRequest request, HttpServletResponse response) 
-//			throws ServletException, IOException {
-//		response.setContentType("text/html;charset=UTF-8");
-//		try(PrintWriter out = response.getWriter()){
-//			
-//			String password;
-//			String email;
-//			User userac = new User();
-//			String typeuser="";
-//			RequestDispatcher rd = null;
-//			
-//			if(request.getParameter("signupbtn") !=null) {
-//				password = request.getParameter("password");
-//				email = request.getParameter("email");
-//				typeuser = userac.userlogin(email, password);
-//				
-//				request.setAttribute("typeuser", typeuser);
-//				request.setAttribute("email", email);
-//				
-//				rd = request.getRequestDispatcher("index.jsp");
-//			}
-//			rd.forward(request, response);
-//		}
-//		
-//	}
 
 }

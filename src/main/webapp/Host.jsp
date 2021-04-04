@@ -3,7 +3,8 @@
     <%@ page  session="true" %>
     <%  
 	    HttpSession ses = request.getSession();
-	    if(request.getAttribute("typeuser")==null){
+    System.out.print(ses.getAttribute("typeuser"));
+	    if(ses.getAttribute("typeuser")==null){
 	    	response.sendRedirect("index.jsp");
 	    }else{
 	    	String type = ses.getAttribute("typeuser").toString();
