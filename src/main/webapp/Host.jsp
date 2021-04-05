@@ -8,7 +8,7 @@
 	    }else{
 	    	String type = ses.getAttribute("typeuser").toString();
 	    	if(!type.equals("HOST")){
-		    	response.sendRedirect("index.jsp");
+		    	response.sendRedirect("GUEST.jsp");
 	    	}
 	    }
     %>

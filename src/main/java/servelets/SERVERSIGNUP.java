@@ -3,6 +3,7 @@ package servelets;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,7 +36,8 @@ public class SERVERSIGNUP extends HttpServlet {
 
 			
 			String firstname , lastname, usertype, birthdate, email, password, street, city, state, zip;
-			
+
+			RequestDispatcher rd = null;
 			if(request.getParameter("btnsingup") !=null) {
 				firstname = request.getParameter("txtfname");
 				lastname = request.getParameter("txtlname");
@@ -50,9 +52,10 @@ public class SERVERSIGNUP extends HttpServlet {
 				System.out.println(firstname+" "+lastname+" "+usertype+" "+birthdate+" "+email+" "+password+" "+street+" "+city+" "+state+" "+zip);
 				User userac = new User();
 				userac.saveuser(firstname, lastname, usertype, birthdate, email, password, street, city, state, zip);
-
-				request.getRequestDispatcher("index.jsp?register=successful");
+				
+				rd = request.getRequestDispatcher("index.jsp?register=successful");
 			}
+			rd.forward(request, response);
 		}
 	}
 
